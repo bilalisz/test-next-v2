@@ -1,0 +1,9 @@
+query getUsers {
+  users {
+    user_name
+    email
+    phone
+    linkedin_url
+    company
+  }
+}
