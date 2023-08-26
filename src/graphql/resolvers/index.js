@@ -39,7 +39,10 @@ const resolvers = {
             };
           });
         }
-        const filterUsers = await User.find({ $text: { $search: filter } });
+        const filterUsers = await User.find({
+          $text: { $search: filter, $caseSensitive: false },
+        });
+
         return filterUsers;
       } catch (error) {
         throw new Error(error.message);

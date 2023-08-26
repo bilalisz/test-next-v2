@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 const { Search } = Input;
 
 const CustomSearch = (props) => {
-  const { onSearch } = props;
+  const { onSearch, onChnage } = props;
 
   return (
     <Search
@@ -13,6 +13,7 @@ const CustomSearch = (props) => {
       enterButton={<FaSearch size={16} />}
       size="middle"
       onSearch={onSearch}
+      onChange={onChnage}
       className="w-80 custom-style"
     />
   );

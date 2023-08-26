@@ -8,7 +8,7 @@ const userModel = new mongoose.Schema({
   company: String,
 });
 
-const forIndex = userModel.index({
+userModel.index({
   user_name: "text",
   email: "text",
   phone: "text",
