@@ -8,4 +8,12 @@ const userModel = new mongoose.Schema({
   company: String,
 });
 
+const forIndex = userModel.index({
+  user_name: "text",
+  email: "text",
+  phone: "text",
+  linkedin_url: "text",
+  company: "text",
+});
+
 export const User = mongoose.models.users || mongoose.model("users", userModel);
