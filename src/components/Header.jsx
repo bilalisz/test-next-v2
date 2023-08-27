@@ -7,9 +7,9 @@ const Header = () => {
       <Link className="text-white font-bold" href="/">
         Test-App
       </Link>
-      <Link className="text-sky-900 bg-white p-2 rounded-md" href="#">
+      {/* <Link className="text-sky-900 bg-white p-2 rounded-md" href="#">
         Add User
-      </Link>
+      </Link> */}
     </nav>
   );
 };
