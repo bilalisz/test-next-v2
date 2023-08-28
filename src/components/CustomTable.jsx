@@ -3,6 +3,7 @@ import { Table } from "antd";
 import CustomSearch from "./Search";
 import client from "../graphql/apollo-client";
 import gql from "graphql-tag";
+import Link from "next/link";
 // import CustomSearch from "./Search";
 
 const columns = [
@@ -54,6 +55,11 @@ const columns = [
     sorter: {
       compare: (a, b) => a.linkedin_url.localeCompare(b.linkedin_url),
     },
+    render: (value) => (
+      <Link href={value} target="_blank">
+        {value}
+      </Link>
+    ),
   },
 ];
 
