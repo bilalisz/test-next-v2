@@ -111,24 +111,28 @@ const CustomTable = (props) => {
   };
 
   return (
-    <div className="max-auto px-3 py-3">
+    <>
       {users ? (
-        <>
-          <div className="flex justify-between items-center">
-            <span>Total Users ({users?.length || 0})</span>
-            <CustomSearch onChnage={OnSearchChange} onSearch={onSearch} />
-          </div>
-          <div>
-            <Table
-              className="h-96"
-              columns={columns}
-              dataSource={users}
-              onChange={onChange}
-            />
-          </div>
-        </>
+        <div className="max-auto px-3 py-3">
+          {users ? (
+            <>
+              <div className="flex justify-between items-center">
+                <span>Total Users ({users?.length || 0})</span>
+                <CustomSearch onChnage={OnSearchChange} onSearch={onSearch} />
+              </div>
+              <div>
+                <Table
+                  className="h-96"
+                  columns={columns}
+                  dataSource={users}
+                  onChange={onChange}
+                />
+              </div>
+            </>
+          ) : null}
+        </div>
       ) : null}
-    </div>
+    </>
   );
 };
 
