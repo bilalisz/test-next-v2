@@ -75,7 +75,7 @@ const CustomTable = (props) => {
 
   useEffect(() => {
     if (!searchValue) {
-      setUsers(props.dataSource);
+      setUsers(dataSource);
       setInitialLoad(true);
     }
   }, [initialLoad]);
